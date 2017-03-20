@@ -8,7 +8,7 @@ import (
 
 func lineCount(filename string) (int64, error) {
     lc := int64(0)
-    f, err := os.Open("pg100.txt")
+    f, err := os.Open("leking.txt")
     if err != nil {
         return 0, err
     }

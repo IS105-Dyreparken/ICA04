@@ -5,6 +5,7 @@ import (
     "log"
     "fmt"
     "io/ioutil"
+    "../lineshift"
 )
 
 func main() {
