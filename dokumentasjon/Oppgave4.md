@@ -37,7 +37,7 @@ Infomengde = log2 (1/(1506/10539)) = log2(10539/1506) = 2,806944307271599 = 3 bi
 Det vi lærer er at fakultetet for Økonomi og samfunnsvitenskap returnerer oss minst informasjon. Dette gir mening i forhold til Huffman-kode, da det som har høyest sannsynlighet for å gå igjen blir lagret med minst mulig bits, slik at vi får maks ut av komprimeringen.
 
 c)  
-![](dokumentasjon/images/Huffman Tree riktig.png)
+![](ICA04/dokumentasjon/images/Huffman Tree riktig.png)
 
 d)  
 Hvis vi tar utgangspunkt i tallene over, så får vi 16 bits totalt. Hvis vi deler disse 16 bit på 6, så får vi en gjennomsnittslengde på 2.67 bit for fakultetskodene
