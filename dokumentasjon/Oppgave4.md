@@ -38,7 +38,7 @@ Det vi lærer er at fakultetet for Økonomi og samfunnsvitenskap returnerer oss 
 
 c)
 
-![Huffman-tree](images/Huffman Tree riktig.png)
+![Huffman-tree](https://github.com/IS105-Dyreparken/ICA04/tree/Marius/dokumentasjon/images/Huffman Tree riktig.png)
 
 Fakultet                     | Sannsynlighet | Kode | Lengde
 -----------------------------|---------------|------|-------
