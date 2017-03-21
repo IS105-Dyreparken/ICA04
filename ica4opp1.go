@@ -8,8 +8,8 @@ import (
 )
 
 func main() {
-	filepath := "C:/Gowork/src/is105-ica04/files/text1.txt"
-	filepath2 := "C:/Gowork/src/is105-ica04/files/text2.txt"
+	filepath := "C:/Gowork/src/ICA04/files/text1.txt"
+	filepath2 := "C:/Gowork/src/ICA04/files/text2.txt"
 	fileToByteslice(filepath)
 	fileToByteslice(filepath2)
 }
