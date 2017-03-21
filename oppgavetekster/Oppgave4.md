@@ -2,8 +2,8 @@
 
 a)
 
-|Fakultet|Studenter 2014|Sannsynlighet i %|
-|----------------------------|-------|
+|Fakultet  |Studenter 2014|Sannsynlighet i %|
+|----------------------------|-------|------|
 |Økonomi og samfunnsvitenskap|3093   |29,35%|
 |Teknologi og realfag        |2166   |20,55%|
 |Helse og idrettsvitenskap   |1829   |17,35%|
@@ -36,6 +36,11 @@ Infomengde = log2 (1/(1506/10539)) = log2(10539/1506) = 2,806944307271599 = 3 bi
 
 Det vi lærer er at fakultetet for Økonomi og samfunnsvitenskap returnerer oss minst informasjon. Dette gir mening i forhold til Huffman-kode, da det som har høyest sannsynlighet for å gå igjen blir lagret med minst mulig bits, slik at vi får maks ut av komprimeringen.
 
-c)
+c)  
+![](dokumentasjon/images/Huffman Tree riktig.png)
 
-d)
+d)  
+Hvis vi tar utgangspunkt i tallene over, så får vi 16 bits totalt. Hvis vi deler disse 16 bit på 6, så får vi en gjennomsnittslengde på 2.67 bit for fakultetskodene
+
+Ved 100 mulige utfall vil vi få et gjennomsnitt på 2.67*100 utfall = 267 bit
+Altså vil den gjennomsnittlige størrelsen på en lengde med 100 fakultetskoder være 267 bit.
