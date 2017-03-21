@@ -1,31 +1,25 @@
 package main
 
 import (
-    "bufio"
-    "fmt"
-    "os"
+	"bufio"
+	"fmt"
+	"os"
 )
 
-func lineCount(filename string) (int64, error) {
-    lc := int64(0)
-    f, err := os.Open("leking.txt")
-    if err != nil {
-        return 0, err
-    }
-    defer f.Close()
-    s := bufio.NewScanner(f)
-    for s.Scan() {
-        lc++
-    }
-    return lc, s.Err()
+func main() {
+	lineCount()
 }
 
-func main() {
-    filename := `testfile`
-    lc, err := lineCount(filename)
-    if err != nil {
-        fmt.Println(err)
-        return
-    }
-    fmt.Println(filename+" line count:", lc)
+func lineCount() {
+	file, _ := os.Open("leking.txt")
+	fileScanner := bufio.NewScanner(file)
+	lineCount := 0
+	for fileScanner.Scan() {
+		lineCount++
+	}
+	fmt.Println("Number of lines:", lineCount)
+}
+
+func findRunes() {
+
 }
