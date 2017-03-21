@@ -1,3 +1,0 @@
-package readwrite
-
-import "fmt"
