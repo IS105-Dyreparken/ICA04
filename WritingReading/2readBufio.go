@@ -6,6 +6,8 @@ import (
 	"os"
 )
 
+// main Funksjon som skal finne antall linjer lest
+// og fem mest leste runer.
 func main() {
 	lineCount()
 }
