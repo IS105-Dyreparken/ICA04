@@ -2,23 +2,15 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
 )
 
-var (
-	fileInfo os.FileInfo
-	err      error
-)
-
 func main() {
-	fmt.Print("Enter name of the file: ")
-	var input string
-	fmt.Scanln(&input)
 
-	fileInfo, err = os.Stat(input)
+	fileInfo, err := os.Lstat(os.Args[1])
 	if err != nil {
-		log.Fatal(err)
+		fmt.Println("can't read file:", os.Args[1])
+		panic(err)
 	}
 
 	fmt.Println("File name:", fileInfo.Name())      //fil navn
