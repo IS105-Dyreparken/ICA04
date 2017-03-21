@@ -5,6 +5,8 @@ import (
 	"io"
 	"log"
 	"os"
+	"strings"
+	"../lineshift"
 )
 
 func main() {
