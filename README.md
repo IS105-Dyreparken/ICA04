@@ -2,11 +2,17 @@
 
 ICA04 for gruppe 2, Dyreparken
 
-Består av:
+Består av:  
 Marius Norli
+
 Nikolai Holmen Dyb
+
 Sindre Thompson
-Ella Krossen
+
+Ella Krossen  
+
 Erik Yang
+
 Shiwan Hassan
+
 Benjamin Sandøy
