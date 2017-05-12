@@ -14,14 +14,14 @@ func main() {
 	}
 
 	i64 := fileInfo.Size()
-	b := float64(i64)
-	kibi := b / 1024
+	bytes := float64(i64)
+	kibi := bytes / 1024
 	mibi := kibi / 1024
 	gibi := mibi / 1024
 
 	fmt.Println("Infomation about a file: " + filnavn)
 
-	fmt.Println("Size: ", bytes)
+	fmt.Println("Size bytes: ", bytes)
 	fmt.Println("Kibibytes: ", kibi)
 	fmt.Println("Mibibytes: ", mibi)
 	fmt.Println("Gibibytes: ", gibi)
