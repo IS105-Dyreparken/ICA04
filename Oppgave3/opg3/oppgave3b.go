@@ -1,7 +1,7 @@
 // Dette er ikke vår kode, kode tatt ifra:
 // https://github.com/Zwirc/IS-105/blob/master/ICA04/src/oppgaver/oppgave3.go
 // Se readme for forklaring av kode
-package main
+package opg3
 
 import (
 	"bufio"
@@ -12,14 +12,12 @@ import (
 	"sort"
 )
 
-func main() {
-	Oppgave3b()
-}
-
+// Oppgave3b bruker 3 funksjoner for å
+// finne linjeskift og runer.
 func Oppgave3b() {
 	fmt.Println("Skriv inn filen du ønsker å scanne:")
 	var filelenght = bufio.NewScanner(os.Stdin)
-	var fileinput = "Ingen fil valgt"
+	var fileinput = ""
 	for filelenght.Scan() {
 		fileinput = string(filelenght.Text())
 		break
@@ -38,7 +36,7 @@ func Oppgave3b() {
 //func Oppgave3c(int int) {
 //	fmt.Println("Kjør benchmark go test -bench=. i benchmark mappen")
 //	if int == 1 {
-//		fileInfo("../../files/pg100.txt")
+//		fileInfo("pg100.txt")
 //	}
 //}
 
@@ -65,14 +63,13 @@ func findInText(filename string, find string) int {
 // Lager en map med resultatet for hver rune, og returnerer denne
 func countFile(filename string) map[int]string {
 	m := make(map[int]string)
-	count := 0
 	// Runer for Ascii code valgt:
 	for i := 0x20; i <= 0x7F; i++ {
-		count = findInText(filename, string(i))
+		count := findInText(filename, string(i))
 		rune := string(i)
 		m[count] = rune
 	}
-	fmt.Println(count)
+	fmt.Println()
 	return m
 }
 
@@ -84,11 +81,6 @@ func sortAndPrint(m map[int]string) {
 		keys = append(keys, k)
 	}
 	sort.Ints(keys)
-
-	//// Print Alle:
-	//for _, k := range keys {
-	//	fmt.Println("Key:", k, "Value:", m[k])
-	//}
 
 	// Print 5 største:
 	fmt.Println("5 mest brukte runes:")

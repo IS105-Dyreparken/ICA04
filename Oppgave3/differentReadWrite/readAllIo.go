@@ -17,7 +17,6 @@ func main() {
 	data, err := ioutil.ReadAll(file)
 	if err != nil {
 		log.Fatal(err)
-		fmt.Print(data)
 	}
-
+	fmt.Printf("%s", data)
 }
