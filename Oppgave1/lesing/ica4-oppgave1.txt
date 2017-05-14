@@ -1,0 +1,28 @@
+Vi har lest begge filene vha. fileutils og fant ut at det filene er ganske like med noen forskjell i koden.
+I koden har vi lagt til en printf metode som fortmaterer teksten til heksadesimalet tegn og string.
+Slik kan vi finne ut at text1.txt filen innholder flere heksadesimal tegn enn text2.txt filen. Ved hjelp av fmt.Prtintf(%c) functionen, ser vi at det ligger en heksadesimal mer i  text1.txt enn text2.txt filen.
+
+Formateringen ser slik ut:
+
+text1.txt
+T e s t e r   l i n j e s k i f t .
+O g   e n   t i l   . . .
+O g   e n   t i l   . . .
+O g   e n   t i l   . . .
+]546573746572206c696e6a65736b6966742e0d0a4f6720656e2074696c202e2e2e0d0a4f6720656e2074696c202e2e2e0d0a4f6720656e2074696c202e2e2e0d0a
+
+text2.txt
+[T e s t e r   l i n j e s k i f t .
+ O g   e n   t i l   . . .
+ O g   e n   t i l   . . .
+ O g   e n   t i l   . . .
+]546573746572206c696e6a65736b6966742e0a4f6720656e2074696c202e2e2e0a4f6720656e2074696c202e2e2e0a4f6720656e2074696c202e2e2e0a
+
+Vi kan se at I text1.txt filen ligger det en heksadesimal som vi ikke kan finne I text2.txt filen. Det tegnet er 0D.
+Dvs. At I text1.txt filen har vi bade line feed og carriage return. I text2.txt filen derimot har vi kun line feed. Det er en av forskjellene mellom de to filene vi har lest.
+0A = line feed
+0D = Carrige return.
+
+
+CR og LF er kontrolltegn, henholdsvis kodet 0x0D (13 desimal) og 0x0A (10 desimal). De brukes til � markere et linjeskift i en tekstfil.
+Som angitt, bruker Windows to tegn CR LF sekvens; Unix bruker bare LF og den gamle MacOS (pre-OSX MacIntosh) brukte CR.

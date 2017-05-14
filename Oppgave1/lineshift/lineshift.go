@@ -6,13 +6,13 @@ import (
 )
 
 func Lineshift(inputArray []byte) {
-
+	fmt.Println()
 	//Finner lengden på arrayet og justerer indeksene slik at man får siste og nest siste posisjon i byte-arrayet
 	lineFirst := len(inputArray)
 	lineLast := len(inputArray)
-	lineLast --
-	lineFirst --
-	lineLast --
+	lineLast--
+	lineFirst--
+	lineLast--
 
 	//Henter ut bytes på siste og nest siste plass i arrayet og printer disse + hele arrayet, mest for debugging
 	arrFirst := inputArray[lineFirst]
