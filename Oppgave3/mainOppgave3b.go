@@ -1,7 +1,7 @@
 // Dette er ikke vår kode, kode tatt ifra:
 // https://github.com/Zwirc/IS-105/blob/master/ICA04/src/oppgaver/oppgave3.go
 // Se readme for forklaring av kode
-package opg3
+package main
 
 import (
 	"bufio"
@@ -14,7 +14,7 @@ import (
 
 // Oppgave3b bruker 3 funksjoner for å
 // finne linjeskift og runer.
-func Oppgave3b() {
+func main() {
 	fmt.Println("Skriv inn filen du ønsker å scanne:")
 	fmt.Println("Tekstfil i mappe: pg100.txt")
 	var filelenght = bufio.NewScanner(os.Stdin)
@@ -89,10 +89,3 @@ func sortAndPrint(m map[int]string) {
 	fmt.Println("Antall:", value4, "Rune:", m[value4])
 	fmt.Println("Antall:", value5, "Rune:", m[value5])
 }
-
-//func Oppgave3c(int int) {
-//fmt.Println("Kjør benchmark go test -bench=. i benchmark mappen")
-//if int == 1 {
-//fileInfo("pg100.txt")
-//}
-//}

@@ -1,51 +1,37 @@
 # Oppgave 3
 
+Oppgave 2
+TIL OPPGAVE 3
+Ta bilder av koden og legg det inn i dokumentasjonen der jeg snakker om den.
+
 a)
+
 Pakker
-Golang har flere pakker for å håndtere filer.
-Os pakken har en del grunnleggende funksjoner for å
-arbeide med filene. Io, ioutil og bufio pakkene har
-ekstra funksjoner. Et eksempel er ioutil.WriteFile
-som lager/åpner, skriver i og lukker en fil. Ved bruk
-av os pakken må man bruke flere funksjoner som OpenFile,
-Write og Close. Ioutil pakken gjør koden mindre og kjappere
-å skrive.
+
+Golang har flere pakker for å håndtere filer. Os pakken har en del grunnleggende funksjoner for å arbeide med filene. Io, ioutil og bufio pakkene har ekstra funksjoner. Et eksempel er ioutil.WriteFile som lager/åpner, skriver i og lukker en fil. Ved bruk av os pakken må man bruke flere funksjoner som OpenFile, Write og Close. Ioutil pakken gjør koden mindre og kjappere å skrive.
 
 Generelle Operasjoner
-I golang har man flere funksjoner som brukes for å
-arbeide med filer. Flere grunnleggende som å lage en
-fil og slette den, gi nytt navn og flytte den, og åpne
-og lukke den. Det er også funksjoner for informasjon
-relatert til filen.
+
+I golang har man flere funksjoner som brukes for å arbeide med filer. Flere grunnleggende som å lage en fil og slette den, gi nytt navn og flytte den, og åpne og lukke den. Det er også funksjoner for informasjon relatert til filen.
 
 Write
-Golang har funksjoner som skriver til filer. Det vil si
-at et program kan endre dataen i en fil. Os.Write er en
-funksjon som skriver til en fil. Generelt blir write brukt
-som et uttrykk for å endre på en fil.
-Hvis du bytter navn eller flytter en fil sier man at man
-skriver filen til mappen.
+
+Golang har funksjoner som skriver til filer. Det vil si at et program kan endre dataen i en fil. Os.Write er en funksjon som skriver til en fil. Generelt blir write brukt som et uttrykk for å endre på en fil.Hvis du bytter navn eller flytter en fil sier man at man skriver filen til mappen.
 
 Read
-Likt skriving, golang kan også lese filer. Programmet
-leser dataen i filen og gir resultatet som var spesifisert.
-Ulikt skriving er det funksjoner i bufio pakken som ikke er
-tilgjengelige i os.File eller io.Reader.
+
+Likt skriving, golang kan også lese filer. Programmet leser dataen i filen og gir resultatet som var spesifisert. Ulikt skriving er det funksjoner i bufio pakken som ikke er tilgjengelige i os.File eller io.Reader.
 
 Buffering
-Det er også mulig å skrive og lese med en buffer; programmet
-håndterer data i minnet. Når du skriver med en buffer, skriver
-du til filen i slices i stedet for byte til byte. Du kan for
-eksempel skrive et vsist antall bytes i minne, før du bestemmer
-å skrive til disk. Lesing bruker samme logikk. Du leser et
-visst antall bytes i puljer.
+
+Det er også mulig å skrive og lese med en buffer; programmet håndterer data i minnet. Når du skriver med en buffer, skriver du til filen i slices i stedet for byte til byte. Du kan for eksempel skrive et vsist antall bytes i minne, før du bestemmer å skrive til disk. Lesing bruker samme logikk. Du leser et visst antall bytes i puljer.
 
 Arkivere og Komprimere
-Golang har også muligheten til å arkivere og komprimere
-filer ved bruk av archive/zip og compress/gzip pakkene.
 
+Golang har også muligheten til å arkivere og komprimere filer ved bruk av archive/zip og compress/gzip pakkene.
 
 b)
+
 DifferentReadWrite mappen inneholder tre programmer som leser på forskjellig måte og et program som leser. Alle programmene bruker «leking.txt».
 
 bufferWriting.go bruker en buffer for å legge til navn i tekst filen.
@@ -62,15 +48,20 @@ https://github.com/Zwirc/IS-105/blob/master/ICA04/src/oppgaver/oppgave3.go
 
 Pakker
 Bufio: Implementerer bufret I/O. Tar i bruk io.Reader og io.Writer for å lage et nytt objekt som også tar i bruk grensesnittet, men gir buffering og hjelp for tekstlig I/O.
+
 Bytes: Implementerer funksjoner for å manipulere «byte slices».
+
 Fmt: Implementerer funksjoner for å formatere I/O ved hjelp av utskrifts verb.
+
 Log: Implementerer en måte for å logge informasjon. I koden blir den brukt for å logge feilmeldinger.
+
 Os: Gir et uavhengig plattformgrensesnitt for å ta i bruk system operasjoner.
+
 Sort: Blir brukt for å sortere «slices» og samlinger.
 
-Fil som skal bli lest: pg100.txt
+![](images/bilde1.png)
 
-Linje 17 – 34, func Oppgave3b():
+Linje 17 – 34, func main():
 
 Funksjonen blir brukt for å gjøre oppgave 3b; telle antall linjeskift og finne de 5 mest brukte runene. Det første den gjør er å skrive ut en beskjed til brukeren som spør om navnet til en fil som skal bli brukt. Hvis den ikke finner en fil skriver den ut en feil melding når den prøver å åpne filen.
 
@@ -88,6 +79,8 @@ Så bruker den funksjonen «countFile». Den lager et «map» som bruker tidlige
 
 Til slutt blir den siste funksjonen kalt: «sortAndPrint» som buker et map som ble lagd i countFile funksjonen.
 
+![](images/bilde2.png)
+
 Linje 38 – 53, func findInText(filename string, find string) int:
 
 Funksjonen tar in to string argumenter. Det første argumentet blir brukt for å åpne filen som skal bli lest (stringen peker mot filen pga bruk av os.Stdin). Det andre argumentet blir brukt for å søke etter «elementet» du er ute etter. Til slutt returnerer den en int verdi; hvor mange ganger den har telt det andre argumentet.
@@ -96,6 +89,8 @@ Funksjonen prøver først å åpne filen, og gir en feilmelding hvis det skjer e
 
 Til slutt blir bufferen lest og for hver gang den finner elementet du leter etter legger den til 1 i count. Når bufferen er utlest, blir int verdien returner.
 
+![](images/bilde3.png)
+
 Linje 57 – 66, countFile(filename string) map[int]string:
 
 Igjen bruker funksjonen et argument for å peke mot filen som skal bli lest. Denne funksjonen returnerer et map.
@@ -103,6 +98,8 @@ Igjen bruker funksjonen et argument for å peke mot filen som skal bli lest. Den
 Først lager funksjonen et map som bruker int som nøkkel og string som verdi. Så går den gjennom en for løkke for hvert eneste ascii tegn. Hvert ascii tegn skal gå gjennom teksten i filen for å telle antall ganger det er brukt. findInText funksjonen blir brukt for å klare dette. Det siste som skjer i hver løkke er at en nøkkel (count) blir angitt en verdi (rune).
 
 Til slutt blir mappet returnert.
+
+![](images/bilde4.png)
 
 Linje 71 – 90, func sortAndPrint(m map[int]string):
 
