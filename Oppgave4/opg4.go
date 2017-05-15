@@ -1,4 +1,4 @@
-package oppgaver
+package main
 
 //////////////////////////////////
 // 	ICA04, IS-105	 	//
