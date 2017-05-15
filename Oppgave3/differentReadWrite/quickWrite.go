@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"io/ioutil"
 	"log"
 )
@@ -13,4 +14,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println("Skal skrive -Boop- til fil leking.txt.")
 }
