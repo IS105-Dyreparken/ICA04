@@ -43,6 +43,7 @@ readAllIo.go leser hele filen og printer det den har lest.
 https://github.com/Zwirc/IS-105/blob/master/ICA04/src/oppgaver/oppgave3.go
 
 Pakker
+
 Bufio: Implementerer bufret I/O. Tar i bruk io.Reader og io.Writer for å lage et nytt objekt som også tar i bruk grensesnittet, men gir buffering og hjelp for tekstlig I/O.
 
 Bytes: Implementerer funksjoner for å manipulere «byte slices».
