@@ -4,11 +4,22 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"syscall"
 )
+
+func fileInfo(filnavn string) {
+	stdin := os.NewFile(uintptr(syscall.Stdin), "/dev/stdin")
+	fmt.Println("/dev/stdin : ")
+	fileInfo(stdin.Name())
+	fmt.Println("/dev/ram0 :")
+	fileInfo("/dev/ram0")
+
+}
 
 func main() {
 	filnavn := os.Args[1]
 	fileInfo, err := os.Stat(filnavn)
+
 	if err != nil {
 		log.Fatal(err)
 	}
