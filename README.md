@@ -1,18 +1,17 @@
-# is105-ICA04
-
-ICA04 for gruppe 2, Dyreparken
+# ICA04 for gruppe 2, Dyreparken
 
 Består av:  
-Marius Norli
 
-Nikolai Holmen Dyb
+Dyb, Nikolai Holmen
 
-Sindre Thompson
+Hassan, Shiwan
 
-Ella Krossen  
+Krossen, Ella
 
-Erik Yang
+Sandøy, Benjamin AG
 
-Shiwan Hassan
+Thompson, Sindre  
 
-Benjamin Sandøy
+Yang, Erik
+
+Hver av mappene har sin egee readme fil som forklarer oppgaven.
