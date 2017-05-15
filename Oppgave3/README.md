@@ -1,9 +1,5 @@
 # Oppgave 3
 
-Oppgave 2
-TIL OPPGAVE 3
-Ta bilder av koden og legg det inn i dokumentasjonen der jeg snakker om den.
-
 a)
 
 Pakker
@@ -61,7 +57,7 @@ Sort: Blir brukt for å sortere «slices» og samlinger.
 
 ![](images/bilde1.png)
 
-Linje 17 – 34, func main():
+Linje 17 – 35, func main():
 
 Funksjonen blir brukt for å gjøre oppgave 3b; telle antall linjeskift og finne de 5 mest brukte runene. Det første den gjør er å skrive ut en beskjed til brukeren som spør om navnet til en fil som skal bli brukt. Hvis den ikke finner en fil skriver den ut en feil melding når den prøver å åpne filen.
 
@@ -81,7 +77,7 @@ Til slutt blir den siste funksjonen kalt: «sortAndPrint» som buker et map som 
 
 ![](images/bilde2.png)
 
-Linje 38 – 53, func findInText(filename string, find string) int:
+Linje 39 – 54, func findInText(filename string, find string) int:
 
 Funksjonen tar in to string argumenter. Det første argumentet blir brukt for å åpne filen som skal bli lest (stringen peker mot filen pga bruk av os.Stdin). Det andre argumentet blir brukt for å søke etter «elementet» du er ute etter. Til slutt returnerer den en int verdi; hvor mange ganger den har telt det andre argumentet.
 
@@ -91,7 +87,7 @@ Til slutt blir bufferen lest og for hver gang den finner elementet du leter ette
 
 ![](images/bilde3.png)
 
-Linje 57 – 66, countFile(filename string) map[int]string:
+Linje 58 – 68, countFile(filename string) map[int]string:
 
 Igjen bruker funksjonen et argument for å peke mot filen som skal bli lest. Denne funksjonen returnerer et map.
 
@@ -101,8 +97,8 @@ Til slutt blir mappet returnert.
 
 ![](images/bilde4.png)
 
-Linje 71 – 90, func sortAndPrint(m map[int]string):
+Linje 72 – 91, func sortAndPrint(m map[int]string):
 
 Funksjonen bruker kartet som ble lagd tidligere som argument. Variabel «keys» av type []int blir satt opp. En for løkke itererer over m (map). Nøklene blir satt inn i int listen og hver verdi for en string tilføyd (en spesial regel gir lov til at en string kan bli tilføyd i en liste av forskjellig type). Nå er det lagd en liste som har antall ganger telt (int) og hvilket element som er blitt telt (rune).
 
-Listen blir sortert ifra høyest til lavest int verdi, for så å blir skrevet ut til terminalen.
+Listen blir sortert ifra høyest til lavest int verdi, for så å bli skrevet ut til terminalen.
