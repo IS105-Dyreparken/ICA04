@@ -1,4 +1,4 @@
-# Oppgave 3
+# Oppgave 1
 
 a)
 Vi har lest begge filene vha. fileutils og fant ut at filene er ganske like med noen forskjell i koden.
