@@ -6,21 +6,18 @@ import (
 	"log"
 	"os"
 
-	"../lineshift"
+	"ICA04/Oppgave1/lineshift"
 )
 
 func main() {
-	filepath := "C:/Gowork/src/ICA04/files/text1.txt"
-	filepath2 := "C:/Gowork/src/ICA04/files/text2.txt"
-	fileToByteslice(filepath)
-	fileToByteslice(filepath2)
+	fileToByteslice("text1.txt")
+	fileToByteslice("text2.txt")
 }
 
 func fileToByteslice(filename string) []byte {
 
 	// Open file for reading
 	file, err := os.Open(filename)
-
 	if err != nil {
 		log.Fatal(err)
 	}

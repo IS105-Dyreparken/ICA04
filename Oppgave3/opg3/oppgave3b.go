@@ -16,6 +16,7 @@ import (
 // finne linjeskift og runer.
 func Oppgave3b() {
 	fmt.Println("Skriv inn filen du ønsker å scanne:")
+	fmt.Println("Tekstfil i mappe: pg100.txt")
 	var filelenght = bufio.NewScanner(os.Stdin)
 	var fileinput = ""
 	for filelenght.Scan() {
@@ -32,13 +33,6 @@ func Oppgave3b() {
 	sortAndPrint(m)
 
 }
-
-//func Oppgave3c(int int) {
-//	fmt.Println("Kjør benchmark go test -bench=. i benchmark mappen")
-//	if int == 1 {
-//		fileInfo("pg100.txt")
-//	}
-//}
 
 // Oppgave 3b (1/3)
 // Finner tekst i fil.
@@ -95,3 +89,10 @@ func sortAndPrint(m map[int]string) {
 	fmt.Println("Antall:", value4, "Rune:", m[value4])
 	fmt.Println("Antall:", value5, "Rune:", m[value5])
 }
+
+//func Oppgave3c(int int) {
+//fmt.Println("Kjør benchmark go test -bench=. i benchmark mappen")
+//if int == 1 {
+//fileInfo("pg100.txt")
+//}
+//}

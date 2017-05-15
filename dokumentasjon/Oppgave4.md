@@ -14,14 +14,14 @@ a)
 
 b)
 
-N = Totale valg?
-M = Studenter på en gitt linje?
+N = Totale valg
+M = Studenter på en gitt linje
 
 Helse og idrett
-Infomengde = log2(1/(1829/10539)) = log2(10 539/1829) = 2,526611002194811 = 3 bits
+Infomengde = log2 (1/(1829/10539)) = log2(10 539/1829) = 2,526611002194811 = 3 bits
 
 Humaniora og pedagogikk
-Infomengde = log2(1/(1525/10539)) = log2(10539/1525) = 2,788856834605916 = 3 bits
+Infomengde = log2 (1/(1525/10539)) = log2(10539/1525) = 2,788856834605916 = 3 bits
 
 Kunstfag
 Infomengde = log2 (1/(420/10539)) = log2(10539/420) = 4,649204844277404 = 5 bits
