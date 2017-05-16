@@ -54,21 +54,20 @@ For å kunne kjøre filene må man skrive «go run fileinfo.go /dev/stdin» og �
 
 Vi prøve å kjøre /dev/ram0 , men fikk det ikke til. Vi har prøvd å sette inn «Lstat» metode, men fikk dnne meldingen i stedet for.
 
-![](images/bilde4.png)
-
 c)
+
 Test programmet på 3 plattformene.
 
 Test av text1.txt på MS Windows:
 
-![](images/bilde5.png)
+![](images/bilde4.png)
 
 Test av text1.txt på Mac OS X:
 
-![](images/bilde6.png)
+![](images/bilde5.png)
 
 Test av text1.txt på Linux (skyinstansen):
 
-![](images/bilde7.png)
+![](images/bilde1.png)
 
 Resultat med å teste «text1.txt» fant vi ingen forskjeller mellom Linux(skyinstansen) og Mac OS X operativsystemer, men med MS Windows operativsystemer ser ut at MS Windows bruker mer bytes til å kjøre text1.txt filen.  
